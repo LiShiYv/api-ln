@@ -12,7 +12,9 @@ $res = shell_exec($cmd);
 echo $res;echo '<hr>';
 foreach($web_server as $k=>$v){
     $cmd = 'ssh'.$v.'"cd /data/wwwroot/default/shop/api; git pull" ';
-    echo $cmd;echo '</br>';
+	echo $cmd;echo '</br>';
+	$res = shell_exec($cmd);
+	echo $res;echo'<hr>';
 }
 
 ?>
